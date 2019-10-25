@@ -43,7 +43,7 @@ case class GetObject(implicit provider: Provider) extends LazyLogging {
                   HttpResponse(
                     status = StatusCodes.OK,
                     entity = entity,
-                    headers = `Last-Modified`(DateTime(1970, 1, 1)) :: metadataToHeaderList(meta)
+                    headers = metadataToHeaderList(meta)
                   )
                 }
 
